@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart-Ticketing</title>
+
+    <!-- daisy UI & tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <!-- custom color style -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        primary: '#1DD100',
+
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="container mx-auto px-5 lg:px-32 py-12">
+    <!-- Header section start-->
+    <header>
+        <div class="navbar bg-base-100">
+
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-medium text-xl">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+
+                    </ul>
+                </div>
+                <a class="btn btn-ghost font-extrabold text-3xl">P-Ticket</a>
+            </div>
+            <!-- sublist -->
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a>Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Destination</a></li>
+                    <li><a>Search</a></li>
+                </ul>
+            </div>
+            <!-- button -->
+            <div class="navbar-end">
+                <a class="btn text-primary bg-[#1DD1001A] font-bold text-xl border-2 border-solid border-[#1DD10066]">Bus
+                    <span>
+                        <img src="./images/bus-icon.png" alt="bus" width="24px" height="24px">
+                    </span>
+                </a>
+            </div>
+        </div>
+
+
+        <!-- Banner Section start -->
+        <div class="bg-[url('./images/banner.png')] bg-no-repeat bg-center bg-cover rounded-3xl my-20">
+            <div class="hero min-h-screen">
+                <div class="hero-content text-center">
+                    <div class="max-w-xl">
+                        <h1 class="text-5xl font-extrabold text-white ">End-to-End Travel with <br>
+                            <span class="text-primary">P Paribahan</span>
+                        </h1>
+                        <p class="py-7 text-white ">The safest way to buy and sell tickets with over 10 million
+                            fans.Prices are capped at 20% above face value.Primary tickets from over 6000 partnered
+                            events.</p>
+                        <button class="btn btn-primary bg-primary text-black font-bold text-xl px-4 py-2">Buy
+                            Tickets</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <!-- best offer section start -->
+        <section>
+            <h1 class="font-bold text-4xl text-center">Best offers for you</h1>
+
+            <div class="lg:flex gap-8 justify-between my-10">
+
+                <div class="lg:flex lg:w-[45%] bg-[url('./images/cupon-devider.png')] bg-no-repeat bg-center rounded-xl bg-yellow-400">
+                    <div class="lg:w-[60%] pl-8 py-10">
+                        <h3 class="font-extrabold text-3xl">
+                            15% OFF
+                        </h3>
+                        <p class="my-4">
+                            <strong>on your next purchase</strong> 
+                        </p>
+                        <p>use by January 2024</p>
+                    </div>
+                    <div class="lg:w-[40%]  py-5 text-center my-auto">
+                        <h3 class="font-bold text-3xl mb-3">NEW15</h3>
+                        <p>Coupon Code</p>
+                        
+                    </div>
+                </div>
+                <!--  -->
+                <!-- <div class="w-[45%]">
+                    <h2>fafasdf</h2>
+                </div> -->
+                <div class="lg:flex lg:w-[45%] bg-[url('./images/cupon-devider.png')] bg-no-repeat bg-center rounded-xl bg-[#F78C9C]">
+                    <div class="lg:w-[60%] pl-8 py-10">
+                        <h3 class="font-extrabold text-3xl">
+                            20% OFF
+                        </h3>
+                        <p class="my-4">
+                            <strong>on your next purchase</strong> 
+                        </p>
+                        <p>use by January 2024</p>
+                    </div>
+                    <div class="lg:w-[40%]  py-5 text-center my-auto">
+                        <h3 class="font-bold text-3xl mb-3">Couple 20</h3>
+                        <p>Coupon Code</p>
+                        
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="text-center">
+                <button class="rounded-xl font-bold text-xl px-10 py-4 text-center text-primary border-2 border-solid border-primary">See more</button>
+            </div>
+            
+        </section>
+
+        <!--  -->
+    </main>
+
+</body>
+
+</html>
