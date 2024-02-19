@@ -1,5 +1,15 @@
 
 
+function totalSeatsPrices() {
+    const perTicketPrice = 550;
+    const totalPrice = perTicketPrice * count;
+    console.log(totalPrice);
+
+    const finalPrice = document.getElementById('total-price');
+    finalPrice.innerText = totalPrice;
+
+}
+
 function appendSelectedSeats(buttonId) {
     const spanTag = document.createElement('span');
     spanTag.innerText = 'Economoy';
@@ -46,15 +56,51 @@ function getElementId(e) {
 
     const buttonId = e.target.innerText;
     // console.log(values);
-    if (count > 4) {
+    if (count > 3) {
         return;
     }
-
+    count++;
     setButtonBackground(buttonId);
     seatLeft();
     appendSelectedSeats(buttonId);
-    console.log(count++);
+    // console.log(count++);
+    totalSeatsPrices();
 
 }
-let count = 1;
+let count = 0;
 document.addEventListener('click', getElementId);
+
+
+
+const applyButton = document.getElementById('apply-btn');
+applyButton.addEventListener('click', function () {
+    const totalPP = document.getElementById('total-price');
+    const totalP = parseInt(totalPP.innerText);
+
+    const inputText = document.getElementById('input-text').value;
+    const grandTotal = document.getElementById('grand-total');
+    
+    const inputHidden = document.getElementById('input-hidden');
+    
+    if(inputText === "NEW15"){
+        const discountPrice = totalP - (totalP * 0.15);
+        // console.log(discountPrice);
+        grandTotal.textContent = discountPrice;
+        inputHidden.classList.add('hidden');
+    }
+    else if(inputText === "COUPLE 20"){
+        const discountPrice = totalP - (totalP * 0.20);
+        // console.log(discountPrice);
+        grandTotal.textContent = discountPrice;
+        inputHidden.classList.add('hidden');
+    }
+
+})
+
+const applyButton2 = document.getElementById('next-btn');
+applyButton2.addEventListener('click', function(){
+    const confirmMsg = document.getElementById('hidden-div');
+    const bigSection = document.getElementById('big-section');
+    confirmMsg.classList.remove('hidden');
+    bigSection.classList.add('hidden');
+})

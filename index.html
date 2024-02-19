@@ -22,7 +22,6 @@
                         clifford: '#da373d',
                         primary: '#1DD100',
                         'bg-bg': '#F7F8F8',
-
                     }
                 }
             }
@@ -76,7 +75,7 @@
 
 
         <!-- Banner Section start -->
-        <div class="bg-[url('./images/banner.png')] bg-no-repeat bg-center bg-cover rounded-3xl my-20">
+        <div class="bg-[url('./images/banner.png')] bg-no-repeat bg-center bg-cover rounded-3xl">
             <div class="hero min-h-screen">
                 <div class="hero-content text-center">
                     <div class="max-w-xl">
@@ -215,7 +214,7 @@
         </section>
 
         <!-- seats distribution section -->
-        <section>
+        <section id="big-section" class="">
             <div class="flex justify-between mb-10">
 
                 <!-- left -->
@@ -322,7 +321,7 @@
                         <hr class="border-dashed">
                         <!-- appedn -->
                         <div class="py-3">
-                            <div id="name-cls-price" class="">                                
+                            <div id="name-cls-price" class="">
 
                                 <!-- <p>C1</p>
                                 <p>Economoy</p>
@@ -339,18 +338,26 @@
 
                         <div class="py-5 flex justify-between">
                             <p><strong>Total Price</strong></p>
-                            <p><strong>1100</strong></p>
+                            <p><strong>
+                                    <span id="total-price">0</span>
+                                </strong></p>
                         </div>
 
-                        <div class="flex ">
-                            <input type="text" placeholder="type here" name="" id=""
-                                class="outline-none rounded-lg w-full py-3 px-3">
-                            <input type="submit" value="Apply" class="btn px-5 text-white bg-primary">
+                        <div id="input-hidden" class="">
+                            <div class="flex ">
+                                <input id="input-text" type="text" placeholder="Have any copupon?" name="" id=""
+                                    class="outline-none rounded-lg w-full py-3 px-3">
+
+                                <input id="apply-btn" type="submit" value="Apply"
+                                    class="btn px-5 text-white bg-primary">
+                            </div>
                         </div>
 
                         <div class="py-5 flex justify-between">
-                            <p><strong>Total Price</strong></p>
-                            <p><strong>1100</strong></p>
+                            <p><strong>Grand Total</strong></p>
+                            <p><strong>
+                                    <span id="grand-total">0</span>
+                                </strong></p>
                         </div>
                     </div>
 
@@ -368,7 +375,7 @@
                         <input type="text" placeholder="Enter your email id" name="" id=""
                             class="outline-none border-2 w-full rounded-xl px-4 py-4">
 
-                        <input type="submit" value="Next" name="" id=""
+                        <input type="submit" value="Next" name="" id="next-btn"
                             class="outline-none border-2 bg-primary font-extrabold text-xl text-white w-full rounded-xl px-4 py-4">
                     </div>
 
@@ -382,8 +389,11 @@
             </div>
 
             <!-- hidden part & also conditional -->
-            <div class="flex justify-center ">
-                <img src="./images/successss.png" class="hidden" alt="">
+
+        </section>
+        <section id="hidden-div" class="hidden">
+            <div class="flex justify-center">
+                <img src="./images/successss.png" alt="">
             </div>
         </section>
     </main>
