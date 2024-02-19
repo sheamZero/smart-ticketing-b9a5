@@ -7,7 +7,6 @@ function totalSeatsPrices() {
 
     const finalPrice = document.getElementById('total-price');
     finalPrice.innerText = totalPrice;
-
 }
 
 function appendSelectedSeats(buttonId) {
@@ -49,7 +48,6 @@ function setButtonBackground(buttonId) {
     const targetButton = document.getElementById(buttonId);
     targetButton.classList.add('bg-primary');
     // calling appendSelectedSeats function()
-
 }
 
 function getElementId(e) {
